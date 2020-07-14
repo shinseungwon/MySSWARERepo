@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript" src="/Main/Main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Main/Main.css" />
+</head>
+<body>
+    <h1>This is Layout</h1>
+    <input type="button" onclick="location.href='@Url.Action("LogOut", "Main")'" value="Log out" />
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

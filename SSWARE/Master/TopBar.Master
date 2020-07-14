@@ -1,0 +1,174 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TopBar.master.cs" Inherits="SSWARE.Master.TopBar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="/Script/Main.js"></script>
+    <link rel="stylesheet" type="text/css" href="/Css/Main.css"/> 
+    
+    <script type="text/javascript" src="/Grid/Grid.js"></script>    
+    <%--<link rel="stylesheet" type="text/css" href="/Grid/Grid.css"/>--%>
+
+    <script type="text/javascript" src="/Tree/Tree.js"></script>    
+    <%--<link rel="stylesheet" type="text/css" href="/Tree/Tree.css"/>--%>
+
+    <script type="text/javascript" src="/Editor/Editor.js"></script>
+    <%--<link rel="stylesheet" type="text/css" href="/Editor/Editor.css"/>--%>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        header {
+            width: 100%;
+            height: 100px;
+            left: 0;
+            top: 0;
+            background-color: darkgray;
+            position: fixed;
+        }
+
+        footer {
+            width: 100%;
+            height: 100px;
+            left: 0;
+            bottom: 0;
+            background-color: red;
+            position: fixed;
+        }
+
+        .rightnav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            right: 0;
+            background-color: #AAA;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+            .rightnav a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+                .rightnav a:hover {
+                    color: #f1f1f1;
+                }
+
+            .rightnav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+        @media screen and (max-height: 450px) {
+            .rightnav {
+                padding-top: 15px;
+            }
+
+                .rightnav a {
+                    font-size: 18px;
+                }
+        }
+
+        .rightnavbtn{            
+            position: absolute;
+            top:0px;
+            right:0px;            
+            width:20px;
+            height:20px;
+            cursor:pointer;
+        }       
+
+        .topbar{
+            
+        }
+
+        .topbar ul{
+
+        }
+
+        .topbar li{
+            cursor:pointer;
+            float: left;
+        }
+
+        .logo{
+            cursor:pointer;
+            width:100px;
+            height:50px;
+        }
+
+        .Contents{
+            width:1000px;
+            height:1000px;
+            background-color:white;            
+            overflow:scroll;
+        }
+        
+    </style>    
+    <script type="text/javascript">
+
+        var topbarOnload = function () {
+            pageResize();
+        };
+
+        window.onresize = function () {
+            pageResize();            
+        };
+
+        var pageResize = function () {
+            document.getElementById("Contents").style.height
+                = (window.innerHeight - 100) + "px";
+            document.getElementById("Contents").style.width
+                = (window.innerWidth - 200) + "px";
+        };
+
+        var openNav = function () {
+            document.getElementById("rightbar").style.width = "250px";
+        };
+
+        var closeNav = function () {
+            document.getElementById("rightbar").style.width = "0";
+        };
+
+    </script>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <table>
+                <tr>
+                    <td>
+                        <img src="/Media/Image/logo.png" class="logo" onclick="location.href='/default.aspx'" />
+                    </td>
+                    <td>
+                        <div id="topbar" class="topbar" runat="server"></div>
+                    </td>
+                </tr>
+            </table>
+            <img src="/Media/Image/sample.png" class="rightnavbtn" onclick="openNav()" />            
+            <asp:Button ID="bLogOut" runat="server" text="Log out" OnClick="LogOut_Click" />
+        </header>
+
+        <div id="rightbar" class="rightnav" runat="server">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        </div>
+
+        <asp:ContentPlaceHolder ID="CphTopBar" runat="server"></asp:ContentPlaceHolder>
+
+        <%--<footer></footer>--%>
+    </form>
+</body>
+</html>

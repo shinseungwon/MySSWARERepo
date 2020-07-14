@@ -1,0 +1,49 @@
+﻿.grid {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    border: 1px solid;
+    user-select: none;
+}
+
+    .grid th {
+        background-color: rgba(127, 127, 127, 1);
+        border: 1px solid;
+        padding: 2px;        
+    }
+
+    .grid tr {
+    }
+
+        .grid tr:nth-child(even) {
+            background-color: rgba(192, 192, 192, 1);
+        }
+
+        .grid tr.row_selected {
+            background-color: rgba(255, 0, 255, 1);
+        }
+
+        .grid tr.row_deleted {
+            background-color: rgba(0, 255, 0, 1);
+        }
+
+    .grid td {
+        padding: 2px;
+        border: 1px solid;
+        cursor: context-menu;
+    }
+
+        .grid td.col_editable {
+            background-color: rgba(0, 255, 255, 0.5);
+        }
+
+        .grid td.col_editing {
+            background-color: rgba(0, 0, 255, 0.5);
+        }
+
+        .grid td.col_edited {
+            background-color: rgba(255, 0, 0, 0.5);
+        }
+
+        .grid td.col_selected {
+            background-color: rgba(255, 255, 0, 0.5);
+        }

@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.757
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SswareApi", "SswareApi\SswareApi.csproj", "{6FEF7B10-CD48-43E5-91A2-BA810E592F31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helper", "Helpers\Helper.csproj", "{C45AE352-C5B3-4938-8C10-68FA214AF8CF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsole", "TestConsole\TestConsole.csproj", "{F495B03C-2AE8-4533-ABF2-6529ED7486FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FEF7B10-CD48-43E5-91A2-BA810E592F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEF7B10-CD48-43E5-91A2-BA810E592F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEF7B10-CD48-43E5-91A2-BA810E592F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEF7B10-CD48-43E5-91A2-BA810E592F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C45AE352-C5B3-4938-8C10-68FA214AF8CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C45AE352-C5B3-4938-8C10-68FA214AF8CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C45AE352-C5B3-4938-8C10-68FA214AF8CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C45AE352-C5B3-4938-8C10-68FA214AF8CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F495B03C-2AE8-4533-ABF2-6529ED7486FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F495B03C-2AE8-4533-ABF2-6529ED7486FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F495B03C-2AE8-4533-ABF2-6529ED7486FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F495B03C-2AE8-4533-ABF2-6529ED7486FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {26F30143-E0A2-4A7E-9E14-CF1A58B39AF2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://shinseungwon.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SswareApi\\SswareApi.csproj
+		SccProjectName1 = SswareApi
+		SccLocalPath1 = SswareApi
+		SccProjectUniqueName2 = TestConsole\\TestConsole.csproj
+		SccProjectName2 = TestConsole
+		SccLocalPath2 = TestConsole
+		SccProjectUniqueName3 = Helpers\\Helper.csproj
+		SccProjectName3 = Helpers
+		SccLocalPath3 = Helpers
+	EndGlobalSection
+EndGlobal

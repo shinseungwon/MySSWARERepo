@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "_Layout";
+}
+<h1>Home</h1>
+<script>
+    var param = {};
+    param.a = "This is a";
+    var callback = function (obj) {
+        alert(obj);
+    };
+    var obj = SendAjax("/Main/Test", param, callback);
+    console.log(obj);
+</script>

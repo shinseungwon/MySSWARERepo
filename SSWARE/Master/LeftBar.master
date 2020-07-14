@@ -1,0 +1,90 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Master/TopBar.Master" AutoEventWireup="true" CodeBehind="LeftBar.master.cs" Inherits="SSWARE.Master.LeftBar" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .leftnav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            top: 100px;
+            left: 0px;
+            background-color: #AAA;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+            .leftnav a {
+                padding: 6px 8px 6px 16px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+            }
+
+            .leftnav a:hover {
+                color: #f1f1f1;
+            }
+
+            .leftnav li{
+                cursor:pointer;                
+            }
+
+        .placeholder {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 100px;
+            left: 200px;            
+        }
+
+
+        .Expand {
+            cursor: pointer;            
+            user-select: none;
+        }
+
+            .Expand::after {
+                content: "\25B6";
+                color: black;
+                display: inline-block;
+                margin-right: 6px;
+            }
+
+        .Expand-down::after {
+            transform: rotate(90deg);
+        }
+
+        .Nested {
+            display: none;
+        }
+
+        .Active {
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var leftbarOnload = function () {
+            var toggler = document.getElementsByClassName("Expand");
+            var i;
+
+            for (i = 0; i < toggler.length; i++) {
+                toggler[i].addEventListener("click", function () {
+                    this.parentElement.querySelector(".Nested").classList.toggle("Active");
+                    this.classList.toggle("Expand-down");                    
+                });
+            }
+        };
+
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="CphTopBar" runat="server">
+
+    <div class="placeholder">
+        <asp:ContentPlaceHolder ID="CphLeftBar" runat="server"></asp:ContentPlaceHolder>
+    </div>    
+    <div class="leftnav" id="leftnav" runat="server">
+    </div>
+
+</asp:Content>
